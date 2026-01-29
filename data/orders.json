@@ -1,0 +1,866 @@
+[
+  {
+    "protein": {
+      "id": "silpancho",
+      "name": "Silpancho Cochabambino",
+      "description": "Milanesa gigante de res sobre lluvia de arroz, coronada con huevos fritos y salsa criolla.",
+      "price": 35,
+      "image": "/images/silpancho_1769650907952.png",
+      "category": "proteins",
+      "customizations": ""
+    },
+    "side": null,
+    "sauces": [],
+    "drink": {
+      "id": "mocochinchi",
+      "name": "Mocochinchi",
+      "description": "Refresco de durazno deshidratado con canela y clavo de olor.",
+      "price": 10,
+      "image": "/images/mocochinchi_1769651055561.png",
+      "category": "drinks",
+      "customizations": ""
+    },
+    "customer": {
+      "name": "Marcelino",
+      "address": "Juarez Celman 5",
+      "phone": "1126830760",
+      "paymentMethod": "mercado_pago"
+    },
+    "total": 45,
+    "date": "2026-01-29T02:02:04.285Z",
+    "status": "pending",
+    "id": "1769652124397"
+  },
+  {
+    "protein": {
+      "id": "silpancho",
+      "name": "Silpancho Cochabambino",
+      "description": "Milanesa gigante de res sobre lluvia de arroz, coronada con huevos fritos y salsa criolla.",
+      "price": 35,
+      "image": "/images/silpancho_1769650907952.png",
+      "category": "proteins",
+      "customizations": ""
+    },
+    "side": {
+      "id": "arroz-queso",
+      "name": "Arroz con Queso",
+      "description": "Arroz cremoso gratinado con queso criollo.",
+      "price": 15,
+      "image": "/images/arroz_queso_1769650956432.png",
+      "category": "sides",
+      "customizations": ""
+    },
+    "salad": null,
+    "sauces": [
+      {
+        "id": "salsa-mani",
+        "name": "Salsa de Maní",
+        "description": "Salsa cremosa de maní con un toque picante.",
+        "price": 0,
+        "image": "/images/salsa_de_mani_1769651039516.png",
+        "category": "sauces",
+        "customizations": ""
+      }
+    ],
+    "drink": {
+      "id": "mocochinchi",
+      "name": "Mocochinchi",
+      "description": "Refresco de durazno deshidratado con canela y clavo de olor.",
+      "price": 10,
+      "image": "/images/mocochinchi_1769651055561.png",
+      "category": "drinks",
+      "customizations": ""
+    },
+    "customer": {
+      "name": "Marcelino",
+      "address": "Juarez celman 5",
+      "phone": "112312312",
+      "paymentMethod": "cash"
+    },
+    "total": 60,
+    "date": "2026-01-29T06:24:09.228Z",
+    "status": "pending",
+    "id": "1769667849292"
+  },
+  {
+    "customer": {
+      "name": "Marcelino",
+      "address": "Juarez celman 5",
+      "phone": "112123123",
+      "paymentMethod": "cash"
+    },
+    "items": [
+      {
+        "id": "1769668899345",
+        "name": "Silpancho Cochabambino",
+        "ingredients": [
+          {
+            "id": "yuca",
+            "name": "Yuca Frita",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/yuca_frita_1769650969508.png"
+          },
+          {
+            "id": "bife",
+            "name": "Bife a la Parrilla",
+            "price": 18,
+            "category": "proteins",
+            "image": "/images/bife.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "ensalada-rusa",
+            "name": "Ensalada Rusa",
+            "price": 5,
+            "category": "salads",
+            "image": "/images/ensalada_rusa.png"
+          },
+          {
+            "id": "mani",
+            "name": "Salsa de Maní",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/salsa_de_mani_1769651039516.png"
+          },
+          {
+            "id": "mocochinchi",
+            "name": "Mocochinchi",
+            "price": 5,
+            "category": "drinks",
+            "image": "/images/mocochinchi_1769651055561.png"
+          }
+        ],
+        "totalPrice": 69
+      },
+      {
+        "id": "1769668925041",
+        "name": "Picante de Pollo",
+        "ingredients": [
+          {
+            "id": "presa-pollo",
+            "name": "Presa de Pollo",
+            "price": 12,
+            "category": "proteins",
+            "image": "/images/pollo_picante_1769650936638.png"
+          },
+          {
+            "id": "papa-hervida",
+            "name": "Papa Hervida",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          },
+          {
+            "id": "soda",
+            "name": "Coca Cola 2L",
+            "price": 15,
+            "category": "drinks",
+            "image": "/images/chuflay_1769651083777.png"
+          }
+        ],
+        "totalPrice": 57
+      }
+    ],
+    "total": 126,
+    "date": "2026-01-29T06:42:47.370Z",
+    "status": "pending",
+    "id": "1769668967382"
+  },
+  {
+    "customer": {
+      "name": "azasd",
+      "address": "asdasd",
+      "phone": "123123123",
+      "paymentMethod": "mercado_pago"
+    },
+    "items": [
+      {
+        "id": "1769669193021",
+        "name": "Armar mi Plato",
+        "ingredients": [
+          {
+            "id": "presa-pollo",
+            "name": "Presa de Pollo",
+            "price": 12,
+            "category": "proteins",
+            "image": "/images/pollo_picante_1769650936638.png"
+          },
+          {
+            "id": "ensalada-mixta",
+            "name": "Ensalada Mixta",
+            "price": 4,
+            "category": "salads",
+            "image": "/images/ensalada_mixta.png"
+          },
+          {
+            "id": "mani",
+            "name": "Salsa de Maní",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/salsa_de_mani_1769651039516.png"
+          },
+          {
+            "id": "soda",
+            "name": "Coca Cola 2L",
+            "price": 15,
+            "category": "drinks",
+            "image": "/images/chuflay_1769651083777.png"
+          }
+        ],
+        "totalPrice": 31
+      },
+      {
+        "id": "1769669206005",
+        "name": "Picante de Pollo",
+        "ingredients": [
+          {
+            "id": "presa-pollo",
+            "name": "Presa de Pollo",
+            "price": 12,
+            "category": "proteins",
+            "image": "/images/pollo_picante_1769650936638.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "chuno",
+            "name": "Chuño Phuti",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          }
+        ],
+        "totalPrice": 38
+      },
+      {
+        "id": "1769669300526",
+        "name": "Silpancho Cochabambino",
+        "ingredients": [
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "papa-hervida",
+            "name": "Papa Hervida",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "huevo-frito",
+            "name": "Huevo Frito",
+            "price": 2,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          }
+        ],
+        "totalPrice": 35
+      }
+    ],
+    "total": 104,
+    "date": "2026-01-29T06:48:39.183Z",
+    "status": "pending",
+    "id": "1769669319192"
+  },
+  {
+    "customer": {
+      "name": "MASDASD",
+      "address": "ASDASDASD",
+      "phone": "123123123",
+      "paymentMethod": "cash"
+    },
+    "items": [
+      {
+        "id": "1769670688217",
+        "name": "Armar mi Plato",
+        "ingredients": [
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "arroz-queso",
+            "name": "Arroz con Queso",
+            "price": 8,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "ensalada-mixta",
+            "name": "Ensalada Mixta",
+            "price": 4,
+            "category": "salads",
+            "image": "/images/ensalada_mixta.png"
+          },
+          {
+            "id": "mani",
+            "name": "Salsa de Maní",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/salsa_de_mani_1769651039516.png"
+          },
+          {
+            "id": "somo",
+            "name": "Somó",
+            "price": 6,
+            "category": "drinks",
+            "image": "/images/somo_1769651070365.png"
+          }
+        ],
+        "totalPrice": 34
+      },
+      {
+        "id": "1769670697384",
+        "name": "Chicharrón de Cerdo",
+        "ingredients": [
+          {
+            "id": "costillas-cerdo",
+            "name": "Costillas de Cerdo",
+            "price": 20,
+            "category": "proteins",
+            "image": "/images/chicharron_cerdo_1769650922110.png"
+          },
+          {
+            "id": "mote",
+            "name": "Mote de Maíz",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/somo_1769651070365.png"
+          },
+          {
+            "id": "chuno",
+            "name": "Chuño Phuti",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          }
+        ],
+        "totalPrice": 45
+      }
+    ],
+    "total": 79,
+    "date": "2026-01-29T07:11:52.497Z",
+    "status": "pending",
+    "id": "1769670712507"
+  },
+  {
+    "customer": {
+      "name": "asdasd",
+      "address": "123123",
+      "phone": "asd123123",
+      "paymentMethod": "cash"
+    },
+    "items": [
+      {
+        "id": "1769670727217",
+        "name": "Armar mi Plato",
+        "ingredients": [],
+        "totalPrice": 0
+      },
+      {
+        "id": "1769670784898",
+        "name": "Silpancho Cochabambino",
+        "ingredients": [
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "papa-hervida",
+            "name": "Papa Hervida",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "huevo-frito",
+            "name": "Huevo Frito",
+            "price": 2,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          }
+        ],
+        "totalPrice": 35
+      },
+      {
+        "id": "1769670787818",
+        "name": "Chicharrón de Cerdo",
+        "ingredients": [
+          {
+            "id": "costillas-cerdo",
+            "name": "Costillas de Cerdo",
+            "price": 20,
+            "category": "proteins",
+            "image": "/images/chicharron_cerdo_1769650922110.png"
+          },
+          {
+            "id": "mote",
+            "name": "Mote de Maíz",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/somo_1769651070365.png"
+          },
+          {
+            "id": "chuno",
+            "name": "Chuño Phuti",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          }
+        ],
+        "totalPrice": 45
+      }
+    ],
+    "total": 80,
+    "date": "2026-01-29T07:13:32.523Z",
+    "status": "pending",
+    "id": "1769670812534"
+  },
+  {
+    "customer": {
+      "name": "Miguel oyola",
+      "address": "olavarria 1950",
+      "phone": "112312311",
+      "paymentMethod": "mercado_pago"
+    },
+    "items": [
+      {
+        "id": "1769699801230",
+        "name": "Silpancho Cochabambino",
+        "ingredients": [
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "papa-hervida",
+            "name": "Papa Hervida",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "huevo-frito",
+            "name": "Huevo Frito",
+            "price": 2,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          }
+        ],
+        "totalPrice": 35
+      }
+    ],
+    "total": 35,
+    "date": "2026-01-29T15:17:06.671Z",
+    "status": "pending",
+    "id": "1769699826840"
+  },
+  {
+    "customer": {
+      "name": "asd",
+      "address": "asdasd",
+      "phone": "asdasd",
+      "paymentMethod": "cash"
+    },
+    "items": [
+      {
+        "id": "1769700906171",
+        "name": "Armar mi Plato",
+        "ingredients": [
+          {
+            "id": "soda",
+            "name": "Coca Cola 2L",
+            "price": 15,
+            "category": "drinks",
+            "image": "/images/chuflay_1769651083777.png"
+          },
+          {
+            "id": "mani",
+            "name": "Salsa de Maní",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/salsa_de_mani_1769651039516.png"
+          },
+          {
+            "id": "ensalada-mixta",
+            "name": "Ensalada Mixta",
+            "price": 4,
+            "category": "salads",
+            "image": "/images/ensalada_mixta.png"
+          },
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "mote",
+            "name": "Mote de Maíz",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/somo_1769651070365.png"
+          }
+        ],
+        "totalPrice": 39
+      }
+    ],
+    "total": 39,
+    "date": "2026-01-29T15:35:29.844Z",
+    "status": "pending"
+  },
+  {
+    "customer": {
+      "name": "asdasd",
+      "address": "asdasdas",
+      "phone": "d11123123123",
+      "paymentMethod": "mercado_pago"
+    },
+    "items": [
+      {
+        "id": "1769701456715",
+        "name": "Silpancho Cochabambino",
+        "ingredients": [
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "papa-hervida",
+            "name": "Papa Hervida",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "huevo-frito",
+            "name": "Huevo Frito",
+            "price": 2,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          }
+        ],
+        "totalPrice": 35
+      },
+      {
+        "id": "1769701463435",
+        "name": "Armar mi Plato",
+        "ingredients": [
+          {
+            "id": "milanesa-res",
+            "name": "Milanesa de Res",
+            "price": 16,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "costillas-cerdo",
+            "name": "Costillas de Cerdo",
+            "price": 20,
+            "category": "proteins",
+            "image": "/images/chicharron_cerdo_1769650922110.png"
+          },
+          {
+            "id": "presa-pollo",
+            "name": "Presa de Pollo",
+            "price": 12,
+            "category": "proteins",
+            "image": "/images/pollo_picante_1769650936638.png"
+          },
+          {
+            "id": "bife",
+            "name": "Bife a la Parrilla",
+            "price": 18,
+            "category": "proteins",
+            "image": "/images/bife.png"
+          },
+          {
+            "id": "chorizo",
+            "name": "Chorizo Frito",
+            "price": 8,
+            "category": "proteins",
+            "image": "/images/chorizo.png"
+          },
+          {
+            "id": "huevo-frito",
+            "name": "Huevo Frito",
+            "price": 2,
+            "category": "proteins",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "arroz",
+            "name": "Arroz Blanco",
+            "price": 5,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "fideo",
+            "name": "Fideos",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/fideos.png"
+          },
+          {
+            "id": "arroz-queso",
+            "name": "Arroz con Queso",
+            "price": 8,
+            "category": "carbs",
+            "image": "/images/arroz_queso_1769650956432.png"
+          },
+          {
+            "id": "mote",
+            "name": "Mote de Maíz",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/somo_1769651070365.png"
+          },
+          {
+            "id": "papa-hervida",
+            "name": "Papa Hervida",
+            "price": 4,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png"
+          },
+          {
+            "id": "papa-frita",
+            "name": "Papas Fritas",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/yuca_frita_1769650969508.png"
+          },
+          {
+            "id": "yuca",
+            "name": "Yuca Frita",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/yuca_frita_1769650969508.png"
+          },
+          {
+            "id": "chuno",
+            "name": "Chuño Phuti",
+            "price": 6,
+            "category": "carbs",
+            "image": "/images/chuno_1769651025618.png "
+          },
+          {
+            "id": "ensalada-rusa",
+            "name": "Ensalada Rusa",
+            "price": 5,
+            "category": "salads",
+            "image": "/images/ensalada_rusa.png"
+          },
+          {
+            "id": "ensalada-mixta",
+            "name": "Ensalada Mixta",
+            "price": 4,
+            "category": "salads",
+            "image": "/images/ensalada_mixta.png"
+          },
+          {
+            "id": "salsa-criolla",
+            "name": "Salsa Criolla",
+            "price": 3,
+            "category": "salads",
+            "image": "/images/silpancho_1769650907952.png"
+          },
+          {
+            "id": "mani",
+            "name": "Salsa de Maní",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/salsa_de_mani_1769651039516.png"
+          },
+          {
+            "id": "llajua",
+            "name": "Llajua",
+            "price": 0,
+            "category": "sauces",
+            "image": "/images/llajua_1769650984020.png"
+          },
+          {
+            "id": "mocochinchi",
+            "name": "Mocochinchi",
+            "price": 5,
+            "category": "drinks",
+            "image": "/images/mocochinchi_1769651055561.png"
+          },
+          {
+            "id": "soda",
+            "name": "Coca Cola 2L",
+            "price": 15,
+            "category": "drinks",
+            "image": "/images/chuflay_1769651083777.png"
+          },
+          {
+            "id": "somo",
+            "name": "Somó",
+            "price": 6,
+            "category": "drinks",
+            "image": "/images/somo_1769651070365.png"
+          }
+        ],
+        "totalPrice": 159
+      }
+    ],
+    "total": 194,
+    "date": "2026-01-29T15:44:41.435Z",
+    "status": "pending"
+  }
+]
