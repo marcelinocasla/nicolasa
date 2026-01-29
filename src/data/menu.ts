@@ -1,4 +1,4 @@
-export type Category = 'proteins' | 'carbs' | 'salads' | 'sauces' | 'drinks' | 'extras';
+export type Category = string;
 
 export interface Ingredient {
     id: string;
