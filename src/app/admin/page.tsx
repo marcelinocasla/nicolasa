@@ -167,6 +167,25 @@ export default function AdminPage() {
     setEditingCategory(null);
   };
 
+
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>, isNew: boolean, productId?: string) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64String = reader.result as string;
+      if (isNew) {
+        setNewProduct({ ...newProduct, image: base64String });
+      } else if (productId) {
+        const product = products.find(p => p.id === productId);
+        if (product) handleProductUpdate({ ...product, image: base64String });
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
   const groupedProducts = products.reduce((acc, product) => {
     const cat = product.category || 'Sin Categoría';
     if (!acc[cat]) acc[cat] = [];
@@ -302,11 +321,16 @@ export default function AdminPage() {
               <div style={{ display: 'grid', gap: '1rem' }}>
                 {groupedProducts[category].map(product => (
                   <div key={product.id} style={{ display: 'flex', gap: '1rem', alignItems: 'center', background: 'rgba(255,255,255,0.02)', padding: '10px', borderRadius: '8px' }}>
-                    <div style={{ width: '60px', height: '60px', borderRadius: '8px', overflow: 'hidden' }}>
+                    <div style={{ width: '60px', height: '60px', borderRadius: '8px', overflow: 'hidden', position: 'relative' }}>
                       <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <label style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0, transition: 'opacity 0.2s', cursor: 'pointer' }} onMouseEnter={e => e.currentTarget.style.opacity = '1'} onMouseLeave={e => e.currentTarget.style.opacity = '0'}>
+                        <span style={{ fontSize: '1.5rem' }}>📷</span>
+                        <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, false, product.id)} style={{ display: 'none' }} />
+                      </label>
                     </div>
                     <div style={{ flex: 1 }}>
                       <input type="text" value={product.name} onChange={(e) => handleProductUpdate({ ...product, name: e.target.value })} style={{ display: 'block', width: '100%', background: 'transparent', border: 'none', color: 'white', fontWeight: 600, padding: '2px' }} />
+                      {/* Price input below */}
                       <input type="number" value={product.price} onChange={(e) => handleProductUpdate({ ...product, price: Number(e.target.value) })} style={{ width: '80px', background: 'transparent', border: '1px solid #444', color: 'var(--color-secondary)', padding: '2px 5px', borderRadius: '4px', fontSize: '0.9rem' }} />
                     </div>
                     <button onClick={() => handleDeleteProduct(product.id)} style={{ color: '#f87171', background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px' }}>🗑️</button>
@@ -359,8 +383,13 @@ export default function AdminPage() {
                   <input type="number" value={newProduct.price} onChange={e => setNewProduct({ ...newProduct, price: Number(e.target.value) })} style={{ width: '100%', padding: '10px', background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', borderRadius: '6px' }} />
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.9rem', color: '#aaa', marginBottom: '5px' }}>Imagen URL</label>
-                  <input type="text" value={newProduct.image} onChange={e => setNewProduct({ ...newProduct, image: e.target.value })} style={{ width: '100%', padding: '10px', background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', borderRadius: '6px' }} />
+                  <label style={{ display: 'block', fontSize: '0.9rem', color: '#aaa', marginBottom: '5px' }}>Imagen</label>
+                  <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                    <div style={{ width: '50px', height: '50px', borderRadius: '6px', overflow: 'hidden', background: '#333' }}>
+                      {newProduct.image && <img src={newProduct.image} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                    </div>
+                    <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ flex: 1, color: 'transparent' }} />
+                  </div>
                 </div>
               </div>
 

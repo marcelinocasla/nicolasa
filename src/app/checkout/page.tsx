@@ -55,7 +55,8 @@ export default function CheckoutPage() {
         }
 
         // WhatsApp Generation
-        const phone = "59160000000"; // NICOLASA's number
+        // WhatsApp Generation
+        const phone = "5491164364006"; // NICOLASA's number
         let message = `*¡Hola! Quiero realizar un pedido en NICOLASA.*\n\n`;
         message += `*Cliente:* ${formData.name}\n`;
         message += `*Dirección:* ${formData.address}\n`;
@@ -73,80 +74,88 @@ export default function CheckoutPage() {
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
         // Clear cart and redirect
+        // Clear cart
         localStorage.removeItem('nicolasa_cart');
-        window.open(url, '_blank');
-    };
 
-    if (loading) return <div className="container" style={{ textAlign: 'center', paddingTop: '4rem' }}>Cargando checkout...</div>;
-    if (cart.length === 0) return <div className="container" style={{ textAlign: 'center', paddingTop: '4rem' }}>Carrito vacío.</div>;
+        // Redirect Logic:
+        // 1. Try opening new tab (preferred for Desktop)
+        // 2. Fallback to existing window (preferred for Mobile to trigger App intent)
+        const newWindow = window.open(url, '_blank');
 
-    return (
-        <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
-            <h1 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Finalizar Pedido</h1>
+        if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+            window.location.href = url;
+        }
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                <div className="glass-panel" style={{ padding: '2rem' }}>
-                    <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-secondary)' }}>Tus Datos</h2>
-                    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        if (loading) return <div className="container" style={{ textAlign: 'center', paddingTop: '4rem' }}>Cargando checkout...</div>;
+        if (cart.length === 0) return <div className="container" style={{ textAlign: 'center', paddingTop: '4rem' }}>Carrito vacío.</div>;
 
-                        <div>
-                            <label className="block mb-2 text-sm text-gray-400">Nombre Completo</label>
-                            <input
-                                required
-                                className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-yellow-500"
-                                style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
-                                value={formData.name}
-                                onChange={e => setFormData({ ...formData, name: e.target.value })}
-                            />
-                        </div>
+        return (
+            <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
+                <h1 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Finalizar Pedido</h1>
 
-                        <div>
-                            <label className="block mb-2 text-sm text-gray-400">Dirección de Entrega</label>
-                            <input
-                                required
-                                style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
-                                value={formData.address}
-                                onChange={e => setFormData({ ...formData, address: e.target.value })}
-                            />
-                        </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                    <div className="glass-panel" style={{ padding: '2rem' }}>
+                        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-secondary)' }}>Tus Datos</h2>
+                        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
 
-                        <div>
-                            <label className="block mb-2 text-sm text-gray-400">WhatsApp / Teléfono</label>
-                            <input
-                                required
-                                type="tel"
-                                style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
-                                value={formData.phone}
-                                onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block mb-2 text-sm text-gray-400">Método de Pago</label>
-                            <select
-                                style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
-                                value={formData.paymentMethod}
-                                onChange={e => setFormData({ ...formData, paymentMethod: e.target.value })}
-                            >
-                                <option value="mercado_pago">Mercado Pago (QR / Link)</option>
-                                <option value="cash">Efectivo contra entrega</option>
-                            </select>
-                        </div>
-
-                        <div style={{ marginTop: '2rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', fontSize: '1.2rem', fontWeight: 700 }}>
-                                <span>Total a Pagar:</span>
-                                <span style={{ color: 'var(--color-secondary)' }}>$ {cartTotal}</span>
+                            <div>
+                                <label className="block mb-2 text-sm text-gray-400">Nombre Completo</label>
+                                <input
+                                    required
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-yellow-500"
+                                    style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
+                                    value={formData.name}
+                                    onChange={e => setFormData({ ...formData, name: e.target.value })}
+                                />
                             </div>
 
-                            <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}>
-                                Enviar Pedido por WhatsApp
-                            </button>
-                        </div>
+                            <div>
+                                <label className="block mb-2 text-sm text-gray-400">Dirección de Entrega</label>
+                                <input
+                                    required
+                                    style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
+                                    value={formData.address}
+                                    onChange={e => setFormData({ ...formData, address: e.target.value })}
+                                />
+                            </div>
 
-                    </form>
+                            <div>
+                                <label className="block mb-2 text-sm text-gray-400">WhatsApp / Teléfono</label>
+                                <input
+                                    required
+                                    type="tel"
+                                    style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
+                                    value={formData.phone}
+                                    onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block mb-2 text-sm text-gray-400">Método de Pago</label>
+                                <select
+                                    style={{ width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid #333', borderRadius: '8px', padding: '12px', color: 'white' }}
+                                    value={formData.paymentMethod}
+                                    onChange={e => setFormData({ ...formData, paymentMethod: e.target.value })}
+                                >
+                                    <option value="mercado_pago">Mercado Pago (QR / Link)</option>
+                                    <option value="cash">Efectivo contra entrega</option>
+                                </select>
+                            </div>
+
+                            <div style={{ marginTop: '2rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', fontSize: '1.2rem', fontWeight: 700 }}>
+                                    <span>Total a Pagar:</span>
+                                    <span style={{ color: 'var(--color-secondary)' }}>$ {cartTotal}</span>
+                                </div>
+
+                                <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}>
+                                    Enviar Pedido por WhatsApp
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
-}
+        );
+    }

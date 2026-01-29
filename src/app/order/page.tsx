@@ -117,7 +117,11 @@ export default function OrderPage() {
   return (
     <div className="container" style={{ paddingBottom: '6rem' }}>
 
-      <div style={{ height: '8px', width: '100%', backgroundImage: 'url(/images/aguayo_pattern.png)', backgroundSize: '200px', position: 'fixed', top: 0, left: 0, zIndex: 50 }}></div>
+      <div style={{ height: '8px', width: '100%', display: 'flex', position: 'fixed', top: 0, left: 0, zIndex: 50 }}>
+        <div style={{ flex: 1, background: '#D92626' }}></div>
+        <div style={{ flex: 1, background: '#F2C744' }}></div>
+        <div style={{ flex: 1, background: '#007A33' }}></div>
+      </div>
 
       {/* Header with entrance animation */}
       <div className="glass-panel" style={{ margin: '1rem 0 2rem 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', animation: 'slideDown 0.5s ease' }}>
